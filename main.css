@@ -1,0 +1,866 @@
+/* Google Fonts lokal eingebunden */
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Londrina Solid';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/londrina-solid-v17-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* londrina-solid-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Londrina Solid';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/londrina-solid-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* montserrat-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/montserrat-v26-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+
+  /*Allgemeine Style Regeln */
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    --schriftfarbe: #716F6F;
+    --secfarbe: #badb83;
+  }
+
+  body {
+    color: var(--schriftfarbe);
+    font-family: 'montserrat';
+  }
+
+  p, address {
+    font-family: 'montserrat';
+    color: #2c2c2c;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-family: 'londrina solid';
+    font-size: 80px;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-family: 'londrina solid';
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--secfarbe);
+  }
+
+  nav {
+    font-family: 'montserrat';
+    font-weight: 600;
+  }
+
+    nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--schriftfarbe);
+  }
+
+
+/* Styles für Blumen Tapete */
+  #blumen-rechts-oben {
+    position: fixed;
+    top: 0;
+    right: 10%;
+    max-height: 35%;
+    max-width: 30%;
+    z-index: 4;
+  }
+
+  #blumen-links-unten {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: -50vw;
+    max-height: 80vh;
+  }
+
+  #blumen-rechts-unten {
+    position: fixed;
+    bottom: 0;
+    right: 15%;
+    max-height: 15%;
+    transform: rotate(180deg);
+    z-index: 3;
+  }
+
+
+  /* Styles für Indexseite*/
+  
+ .startseite-main {
+    display: flex;
+    flex-direction: column;
+    background-image: url('bilder/innenansicht-blumenladen.jpg');
+    background-size: cover;
+    height: 100vh;
+  } 
+
+  .infokarte {
+    padding: 2.2em 2em 2em 2em;
+  
+  }
+
+  .startseite-main a {
+    margin: auto;
+    background-color: rgba(192, 212, 160, 0.8);
+    color: rgb(45, 45, 45);
+    border-radius: 2em;
+    text-align: center;
+    line-height: 1em;
+    text-transform: normal;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+
+  .infokarte h1 {
+    font-size: 38px;
+    margin-bottom: 0.4em;
+    color: var(--schriftfarbe);
+  }
+
+  address {
+    font-style: normal;
+    list-style: none;
+    line-height: 1.5em;
+    margin: 1em 0;
+  }
+
+  .zeiten {
+    font-size: smaller;
+    line-height: 1.5em;
+  }
+
+  #mehr {
+    position: absolute;
+    bottom: 5%;
+    align-self: center;
+    padding: 1em 2em;
+  }
+  
+
+
+/* Styles für Header mit Hauptnavigation */
+  .header {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 3em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 3;    
+  }
+
+
+  .logo {
+    position: relative;
+    z-index: 3;
+    padding-top: 3em;
+    margin-bottom: 1em;
+  }
+
+  .logo a {
+    color: var(--schriftfarbe);
+  }
+
+  .mein-logo a {
+    color: var(--schriftfarbe);
+    text-decoration: none;
+  }
+
+  .js .menubutton {display: none;}
+
+  .hauptnavi {
+    font-size: 16px;
+    padding-bottom: 1em;
+  }
+
+  .haupt-link {margin-right: 1em;}
+
+  .hauptnavi .current .haupt-link {
+    text-decoration: underline;}
+
+  .hauptnavi li:hover .haupt-link {
+    color: rgb(54, 54, 54);
+    transition: all 0.1s ease;
+  }
+
+  .hauptnavi .haupt-link .current {
+    color: var(--secfarbe);
+  }
+
+  #pfeil-oben {
+    width: 50px;
+  }
+
+  .einkaufskorb {
+    position: fixed;
+    top: 50px;
+    right: 30px;
+  }
+
+  .haus-icon {
+    width: 30px;
+    height: auto;
+    position: relative;
+    bottom: 8px;
+  }
+ 
+
+
+/* Styles für Seitennavigation */ 
+  .seitennavi {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: fixed;
+    right: 0;
+    top: 255px;
+    margin-right: -2em;
+    z-index: 3;
+  }
+
+  .seitennavi a {
+    color: var(--schriftfarbe);
+    background-color: var(--secfarbe);
+    padding: 0.5em 3em 0.5em 1.5em;
+    border-radius: 2em;  
+  }
+
+  .seitennavi li {
+    margin-bottom: 2em;
+    font-size: 16px;
+  }
+
+  .seitennavi a:hover {padding-right: 4em;}
+
+  .seitennavi .current a {text-decoration: underline;}
+
+  
+
+
+/* Styles für Footer */
+  
+footer ul {
+    display: flex;
+    justify-content: center;
+    font-size: smaller;
+    font-weight: 300;
+    gap: 1em;
+    padding: 1em 0 1em 0;
+    position: relative;
+    z-index: 5;
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+
+ 
+
+
+/* Styles für Startseite Shop: Grid Haupt-Container und Container Items*/
+
+.shop {
+  padding: 0 15%;
+}
+  #haupt-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "content1 content2"
+        "content3 content4"
+        "content5 content6";
+    gap: 3em;
+    position: relative;
+    z-index: 2;
+  }
+
+  .containerbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+    border-radius: 0.5em;
+    flex: 1;
+  }
+
+  .containerbox h2 {
+    background-color: rgba(113, 111, 111, 0.8);
+    padding: 0.2em 0.8em;
+    border-radius: 0.5em;
+  }
+
+  .containerbox a:hover h2 {
+    font-size: 44px;
+    transition: all 0.1s ease;
+  }
+
+  #content1 {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    grid-area: content1;
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 2em;
+  }
+
+  #content1 p {
+    line-height: 1.5em;
+    margin-top: 1em;
+  }
+
+  #content2 {
+    background-image: url('bilder/blumenstrauss-690px.png');
+    grid-area: content2;
+  }
+
+  #content3 {
+    background-image: url('bilder/zimmerpflanze-690px.png');
+    grid-area: content3;  
+  }
+
+  #content4 {
+    background-image: url('bilder/gartenblumen-690px.png');
+    grid-area: content4;
+  }
+
+  #content5 {
+    background-image: url('bilder/hochzeitsblumen-690px.png');
+    grid-area: content5;
+  }
+
+  #content6 {
+    background-image: url('bilder/wohnaccesoires-690px.png');
+    grid-area: content6;
+  }
+
+
+/* Styles für Strauss Warenseite Grid-Container */
+
+.strauss {
+  padding: 0 15%;
+}
+
+.strauss #pfeil-oben {
+  width: 50px;
+  opacity: 0.8;
+  position: fixed;
+  top: 70%;
+  right: 1%;
+}
+
+ #waren-container {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-areas: 
+    "ware1 ware2 ware3 ware4"
+    "ware5 ware6 ware7 ware8";
+  gap: 2em;
+  position: relative;
+  z-index: 2;
+  justify-content: start;
+  margin-top: 4em;
+  }
+
+  .ware {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    max-width: 250px;
+    height: auto;
+    position: relative;
+  }
+
+
+  .ware img {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+  }
+
+
+  .textkarte {
+    line-height: 1.8em;
+    background-color: var(--secfarbe);
+    padding: 1em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+
+  .textkarte p {
+    font-family: 'londrina solid';
+    color: var(--schriftfarbe);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    font-size: large;
+    margin-bottom: 0.7em;
+  }
+
+  .bildtext {
+    height: 300px;
+  }
+
+  .bildtext ul {
+    list-style: none;
+    margin-top: 1em;
+  }
+
+  .bildtext:hover .infotext {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s ease;
+    cursor: pointer;
+  }
+
+  .strauss .infotext {
+    background-color: white;
+    font-size: small;
+    line-height: 1.5;
+    padding: 2em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .strauss .infotext p {
+    margin-top: 1em;
+  }
+
+
+  .textkarte button {
+    padding: 0.3em 0.8em;
+    border: none;
+    background-color: var(--schriftfarbe);
+    color: white;
+    border-radius: 0.5em;
+    margin-top: 0;
+    font: inherit;
+    font-size: smaller ;
+  }
+
+  .textkarte button:hover {
+    background-color: #5a5a5a;
+    cursor: pointer;
+  }
+
+ #ware1 {grid-area: ware1;}
+ #ware2 {grid-area: ware2;}
+ #ware3 {grid-area: ware3;}
+ #ware4 {grid-area: ware4;}
+ #ware5 {grid-area: ware5;}
+ #ware6 {grid-area: ware6;}
+ #ware7 {grid-area: ware7;}
+ #ware8 {grid-area: ware8;}
+ #ware9 {grid-area: ware9;}
+
+
+  @media screen  and (max-width: 1509px) {
+    #waren-container {
+      display: grid;
+      grid-template-columns: repeat(3, 250px);
+      grid-template-areas: 
+        "ware1 ware2 ware3"
+        "ware4 ware5 ware6"
+        "ware7 ware8 ware9";
+      gap: 2em;
+      position: relative;
+      z-index: 2;
+      justify-content: start;
+      }
+  }
+ 
+  @media screen  and (max-width: 1260px) {
+
+    
+
+    .header {margin-bottom: 4em;}
+
+    .inside main {
+      padding: 0 8%;
+      margin-top: 4%;
+    }
+
+    #blumen-rechts-oben {
+      position: fixed;
+      top: 0;
+      right: 3%;
+      max-height: 35%;
+      max-width: 30%;
+      z-index: 4;
+    }
+
+    h2 {font-size: 30px;}
+
+    .containerbox a:hover h2 {
+      font-size: 33px;
+      transition: all 0.1s ease;
+    }
+
+    .hauptnavi {
+      font-size: 14px;
+      position: relative;
+    }
+
+    .seitennavi {
+      position: absolute;
+      top: 2.5em;
+      left: 0;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    .seitennavi a {
+      margin: 0;
+      padding: 0.5em;
+      border-radius: 0em;
+      font-size: 14px;
+    }
+
+    .hauptnavi li:hover .haupt-link {
+      color: rgb(54, 54, 54);
+      transition: all 0.1s ease;
+    }
+  
+    .seitennavi a:hover {
+      padding-right: 0.5em;
+      background-color:#a4c472;
+    }
+
+    footer ul {
+      background-color: white;
+    }
+
+    #blumen-rechts-unten {
+      right: -1%
+    }
+
+
+  }
+
+  @media screen and (max-width: 1120px) {
+
+    #waren-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+        "ware1 ware2"
+        "ware3 ware4"
+        "ware5 ware6"
+        "ware7 ware8"
+        "ware9 ware10";
+      gap: 2em;
+      position: relative;
+      z-index: 2;
+      justify-items: center;
+      }
+    
+  }
+
+  @media screen and (max-width: 935px) {
+
+    main {margin-top: 2em;}
+
+    .startseite main {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 46px;
+      margin-bottom: 0.3em;
+    }
+
+    .header, .logo {margin-bottom: 0;}
+
+    .no-js .menubutton {display: none;}
+
+    .js .menubutton {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: inherit;
+      font: inherit;
+      border: 0;
+      color: var(--schriftfarbe);
+    }
+
+    .js .menubutton::before {
+      content: url('bilder/menu-burger-horizontal-svgrepo-com.png');
+    }
+
+    .js .hauptnavi {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .js .showmenu + .hauptnavi {
+      max-height: 100rem;
+      transition: max-height 1s ease;
+      overflow: auto;
+    }
+
+    .hauptnavi {
+      flex-flow: column;
+      background-color: white;
+      padding: 0.5em 0 1em 0;
+    }
+
+    .hauptnavi li {
+      padding: 0.3em;
+      font-size: 14px;
+    }
+    .seitennavi {
+      position: static;
+      display: block;
+    }
+
+    .seitennavi li {
+      margin-bottom: 0;
+      border-radius: 0;
+      padding: 0.3em 2em;
+    }
+
+    .seitennavi a {background-color: white;}
+
+    .seitennavi a:hover {
+      background-color: white;
+      color: var(--secfarbe);
+    }
+  }
+
+
+  @media screen and (max-width: 868px){
+
+    .startseite-main {
+      background-image: url('bilder/aussenansicht-blumenladen.jpg');
+      background-size: cover;
+    }
+
+    #haupt-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "content1"
+          "content2"
+          "content3"
+          "content4"
+          "content5"
+          "content6";
+      margin-top: 2em;
+    }
+
+    #content1 {
+      padding-top: 0;
+    }
+    
+  }
+
+  @media screen and (max-width: 757px) {
+
+    #waren-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "ware1"
+        "ware2"
+        "ware3"
+        "ware4"
+        "ware5"
+        "ware6"
+        "ware7"
+        "ware8"
+        "ware9";
+      gap: 2em;
+      position: relative;
+      z-index: 2;
+      justify-items: center;
+      }
+    
+  }
+
+
+  /* styles für Bootstrap Seite Garten und Balkon */
+
+  .warenseite #blumen-rechts-oben {
+    max-height: 25%;
+    position: fixed;
+    right: 20%;
+    position: absolute;
+    top: 5px;
+    
+  }
+  
+  .warenseite .header {
+    margin-bottom: 2em;
+  }
+
+  .card-title, span {
+    font-family: 'montserrat';
+    color: var(--schriftfarbe);
+  }
+
+  .warenseite .card-text {
+    font-size: small;
+  }
+
+  .warenseite li {
+    font-size: 0.9em;
+    font-family: 'montserrat';
+  }
+
+  .display-2, .display-3, .display-4, .display-5, .display-6 {
+    color: var(--schriftfarbe);
+    font-family: 'londrina solid';
+  }
+
+  .warenseite {
+    margin: 0 15%;
+  }
+  .warenseite .card {
+    background-color: #badb83;
+    border: 0;
+  }
+
+  .warenseite button {
+    font-family: 'montserrat';
+  }
+
+
+ /* styles für Bootstrap Seite Über uns */
+  .ueber {
+    padding: 0 15%;
+  }
+
+  .ueber a {
+    text-decoration: none;
+    color: var(--schriftfarbe);
+  }
+
+
+  .ueber .card-header {
+    background-color: #badb83;
+    color: var(--schriftfarbe);
+    font-family: 'londrina solid';
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+
+  .ueber .card {
+    font-family: 'montserrat';
+    color: var(--schriftfarbe);
+  }
+
+  .ueber .card-title {
+    color: var(--schriftfarbe);
+    font-family: 'londrina solid';
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+
+
+
+   /* styles für Bootstrap Seite Info & Kontakt */
+  .kontaktseite {
+    margin: 0 10%;
+  }
+
+  .kontaktseite h2 {
+    font-weight: 300;
+  }
+
+  .kontaktseite p {
+    max-width: 550px;
+    margin: auto;
+  }
+
+  .kontaktseite .card {
+    margin: auto;
+  }
+
+  #carouselExample .carousel-item {
+    object-fit: contain;
+    object-position: center;
+    overflow: hidden;
+    
+  }
+
+  #carouselExample {
+    max-width: 550px;
+    margin: auto; 
+  }
+
+  #hochzeit {
+    max-width: 550px;
+    margin: auto;
+  }
+
+  #kontaktformular {
+    max-width: 550px;
+    margin: auto;
+    background-color: #badb83;
+    ;
+  }
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+  
+
+  
+

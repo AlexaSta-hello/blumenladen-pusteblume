@@ -1,2 +1,2 @@
-# blumenladen
- RWD HTML & CSS, Bootstrap mit php Anbindung an mySQL
+# blumenladen-gh
+ RWD mit HTML & CSS und Bootstrap
