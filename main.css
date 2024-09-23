@@ -301,17 +301,18 @@ footer ul {
 .shop {
   padding: 0 15%;
 }
-  #haupt-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "content1 content2"
-        "content3 content4"
-        "content5 content6";
-    gap: 3em;
-    position: relative;
-    z-index: 2;
-  }
+
+#haupt-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "content1 content2"
+      "content3 content4"
+      "content5 content6";
+  gap: 3em;
+  position: relative;
+  z-index: 2;
+}
 
   .containerbox {
     display: flex;
@@ -335,29 +336,25 @@ footer ul {
     transition: all 0.1s ease;
   }
 
-  #content1 {
+  #content1, 
+  #content2 {
     display: flex;
     flex-flow: column;
     text-align: center;
     grid-area: content1;
     background-color: white;
     border-radius: 0.5em;
-    padding: 2em;
   }
 
-  #content1 p {
+  #content1 p,
+  #content2 p {
     line-height: 1.5em;
     margin-top: 1em;
   }
 
-  #content2 {
-    background-image: url('bilder/blumenstrauss-690px.png');
-    grid-area: content2;
-  }
-
   #content3 {
-    background-image: url('bilder/zimmerpflanze-690px.png');
-    grid-area: content3;  
+    background-image: url('bilder/blumenstrauss-690px.png');
+    grid-area: content3;
   }
 
   #content4 {
@@ -366,9 +363,10 @@ footer ul {
   }
 
   #content5 {
-    background-image: url('bilder/hochzeitsblumen-690px.png');
-    grid-area: content5;
+    background-image: url('bilder/zimmerpflanze-690px.png');
+    grid-area: content5;  
   }
+
 
   #content6 {
     background-image: url('bilder/wohnaccesoires-690px.png');

@@ -20,22 +20,29 @@
     <img id="blumen-rechts-unten" src="bilder/background-720.png" alt="weiße Blumen">
 
     <header class="header">
-        <div class="header">
+        
             <div class="logo">
                 <h1><a href="index.html">PUSTEBLUME</a></h1>
             </div>
             <nav>
                 <button class="menubutton" onclick="this.classList.toggle('showmenu')"></button>
                 <ul class="hauptnavi">
-                    <li class="current"><a class="haupt-link" href="startseite.html">Startseite</a></li>
-                    <li><a class="haupt-link" href="shop.html">Online-Shop</a></li>
+                    <li><a class="haupt-link" href="startseite.html">Startseite</a></li>
+                    <li class="current"><a class="haupt-link" href="shop.html">Online-Shop</a>
+                        <ul class="seitennavi">
+                            <li><a href="shop/strauss.html">Blumensträuße</a></li>
+                            <li><a href="shop/garten-und-balkon.html">Garten & Balkon</a></li>
+                            <li><a href="#">Zimmerpflanzen</a></li>
+                            <li><a href="#">Wohnaccessoires</a></li>
+                        </ul>
+                    </li>
                     <li><a class="haupt-link" href="eventfloristik.html">Eventfloristik</a></li>
                     <li><a class="haupt-link" href="ueber-uns.html">Über uns</a></li>
                     <li><a class="haupt-link" href="info-und-kontakt.html">Info & Kontakt</a></li>
                 </ul>
             </nav>
             
-        </div>
+        
     </header>
 
     
@@ -43,12 +50,29 @@
     <main>
         <div id="haupt-container">
             
-            <div id="content">
-                <h2>A Flower a Day, keeps <br>the Doctor away!</h2>
-                <p>Herzlich willkommen in Leipzig schönstem Blumenladen. 
-                    Kommen Sie uns gerne besuchen oder bestellen Sie online
-                    und lassen sich beliefern.
+            <div id="content1">
+                <h2>Ganz bequem online bestellen <br>und nach Hause liefern lassen!</h2>
+                <p>In unserem Online-Shop findest du handgebundene Blumenkreationen,
+                    Pflanzen für deine Wohnung oder Garten sowie stilvolle Wohnaccessoires.
+
                 </p>
+            </div>
+
+    
+            <div class="containerbox" id="content3">
+                <a href="shop/strauss.html"><h2>Blumensträuße</h2></a>
+            </div>
+    
+            <div class="containerbox" id="content4">
+                <a href="shop/garten-und-balkon.html"><h2>Garten & Balkon</h2></a>
+            </div>
+
+            <div class="containerbox" id="content5">
+                <a href="#"><h2>Zimmerpflanzen</h2></a>
+            </div>
+    
+            <div class="containerbox" id="content6">
+                <a href="#"><h2>Wohnaccessoires</h2></a>
             </div>
        
         </div>
