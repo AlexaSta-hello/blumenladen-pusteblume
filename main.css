@@ -53,6 +53,7 @@
   p, address {
     font-family: 'montserrat';
     color: #2c2c2c;
+    line-height: 1.8em;
   }
 
   * {
@@ -68,7 +69,8 @@
     font-weight: 300;
   }
 
-  h2 {
+  h2,
+  .my-h2 {
     font-family: 'londrina solid';
     font-size: 40px;
     font-weight: 300;
@@ -881,8 +883,11 @@ Styles für Shop: Grid Haupt-Container und Container Items
 
 
 
-   /* styles für Bootstrap Seite Info & Kontakt */
-  .kontaktseite {
+   /* --------------------
+   Eventfloristik
+   -----------------------*/
+   
+   .kontaktseite {
     margin: 0 10%;
   }
 
@@ -899,6 +904,26 @@ Styles für Shop: Grid Haupt-Container und Container Items
     margin: auto;
   }
 
+  #hochzeit {
+    max-width: 550px;
+    margin: auto;
+    border-radius: 1em;
+  }
+
+  #kontaktformular {
+    
+    margin: auto;
+    background-color: #badb83;
+    color: var(--schriftfarbe);
+  }
+
+  
+   
+   /*--------------------
+   Kontakt 
+   ----------------------*/
+
+
   #carouselExample .carousel-item {
     object-fit: contain;
     object-position: center;
@@ -911,17 +936,7 @@ Styles für Shop: Grid Haupt-Container und Container Items
     margin: auto; 
   }
 
-  #hochzeit {
-    max-width: 550px;
-    margin: auto;
-  }
 
-  #kontaktformular {
-    max-width: 550px;
-    margin: auto;
-    background-color: #badb83;
-    ;
-  }
 
   
 
