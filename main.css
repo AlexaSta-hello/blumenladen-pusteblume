@@ -99,7 +99,7 @@
     position: fixed;
     top: 0;
     right: 10%;
-    max-height: 35%;
+    max-height: 30%;
     max-width: 30%;
     z-index: 4;
   }
@@ -110,6 +110,7 @@
     left: 0;
     margin-left: -50vw;
     max-height: 80vh;
+    z-index: 1;
   }
 
   #blumen-rechts-unten {
@@ -336,41 +337,41 @@ footer ul {
     transition: all 0.1s ease;
   }
 
-  #content1, 
-  #content2 {
+  #text-box {
     display: flex;
     flex-flow: column;
     text-align: center;
-    grid-area: content1;
     background-color: white;
     border-radius: 0.5em;
+    margin-bottom: 3em;
+    position: relative;
+    z-index: 2;
   }
 
-  #content1 p,
-  #content2 p {
+  #text-box p {
     line-height: 1.5em;
     margin-top: 1em;
   }
 
-  #content3 {
+  #content1 {
     background-image: url('bilder/blumenstrauss-690px.png');
-    grid-area: content3;
+    grid-area: content1;
   }
+
+  #content2 {
+    background-image: url('bilder/gartenblumen-690px.png');
+    grid-area: content2;
+  }
+
+  #content3 {
+    background-image: url('bilder/zimmerpflanze-690px.png');
+    grid-area: content3;  
+  }
+
 
   #content4 {
-    background-image: url('bilder/gartenblumen-690px.png');
-    grid-area: content4;
-  }
-
-  #content5 {
-    background-image: url('bilder/zimmerpflanze-690px.png');
-    grid-area: content5;  
-  }
-
-
-  #content6 {
     background-image: url('bilder/wohnaccesoires-690px.png');
-    grid-area: content6;
+    grid-area: content4;
   }
 
 
@@ -693,7 +694,7 @@ footer ul {
       margin-top: 2em;
     }
 
-    #content1 {
+    #text-box {
       padding-top: 0;
     }
     
