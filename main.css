@@ -294,12 +294,36 @@ footer ul {
     margin-bottom: 2em;
   }
 
+ /* -------------------------------
+Styles für Startseite
+---------------------------------*/ 
+#startseite {
+  padding: 0 15%;
+}
+
+#text-box {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5em;
+  margin-bottom: 3em;
+  position: relative;
+  z-index: 2;
+}
+
+#text-box p {
+  line-height: 1.5em;
+  margin-top: 1em;
+}
  
 
 
-/* Styles für Startseite Shop: Grid Haupt-Container und Container Items*/
+/* -------------------------------
+Styles für Shop: Grid Haupt-Container und Container Items
+---------------------------------*/
 
-.shop {
+#shop {
   padding: 0 15%;
 }
 
@@ -337,21 +361,6 @@ footer ul {
     transition: all 0.1s ease;
   }
 
-  #text-box {
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-    background-color: white;
-    border-radius: 0.5em;
-    margin-bottom: 3em;
-    position: relative;
-    z-index: 2;
-  }
-
-  #text-box p {
-    line-height: 1.5em;
-    margin-top: 1em;
-  }
 
   #content1 {
     background-image: url('bilder/blumenstrauss-690px.png');
