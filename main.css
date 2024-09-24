@@ -374,6 +374,7 @@ a .text-box:hover {
 
   .flex-content {
     width: 47%;
+    align-self: center;
   }
 
   .bild-container {
