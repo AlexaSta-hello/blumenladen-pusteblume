@@ -46,8 +46,18 @@
   }
 
   body {
+    display: flex;
+    justify-content: center;
     color: var(--schriftfarbe);
     font-family: 'montserrat';
+  }
+
+  .main-wrapper {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
   }
 
   p, address {
@@ -64,7 +74,7 @@
 
   h1 {
     font-family: 'londrina solid';
-    font-size: 80px;
+    font-size: 4.5rem;
     letter-spacing: 0.1em;
     font-weight: 300;
   }
@@ -98,7 +108,37 @@
 
 
 /* Styles für Blumen Tapete */
-  #blumen-rechts-oben {
+  #blumen-rechts-unten {
+    position: fixed;
+    bottom: 0;
+    right: -50%;
+    max-height: 80vh;
+    z-index: 1;
+  }
+
+  #blumen-links-unten {
+    position: fixed;
+    bottom: 0;
+    left: -50%;
+    max-height: 80vh;
+    z-index: 1;
+  }
+
+  #blumen-logo {
+    display: inline;
+    max-height: 80px;
+    transform: rotate(180deg);
+    z-index: 1;
+    margin-left: 0.5em;
+  }
+
+
+  /* Styles für Indexseite*/
+
+  #index {
+    display: block;
+  }
+  #blumen-rechts-oben-index {
     position: fixed;
     top: 0;
     right: 10%;
@@ -107,7 +147,7 @@
     z-index: 4;
   }
 
-  #blumen-links-unten {
+  #blumen-links-unten-index {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -116,7 +156,7 @@
     z-index: 1;
   }
 
-  #blumen-rechts-unten {
+  #blumen-rechts-unten-index {
     position: fixed;
     bottom: 0;
     right: 15%;
@@ -124,9 +164,6 @@
     transform: rotate(180deg);
     z-index: 1;
   }
-
-
-  /* Styles für Indexseite*/
   
  .index-main {
     display: flex;
@@ -187,18 +224,20 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    margin-bottom: 3em;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 3;    
+    width: 100%;
+    position: relative;
+    z-index: 3; 
+    margin-top: 48px;
+  }
+
+  .header-boot {
+    background-color: white;
   }
 
 
   .logo {
-    position: relative;
     z-index: 3;
-    padding-top: 3em;
+    padding-top: 16px;
     margin-bottom: 1em;
   }
 
@@ -213,9 +252,26 @@
 
   .js .menubutton {display: none;}
 
+  .main-nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 20px 10px 20px 10px;
+    background-color: white;
+    margin-bottom: 3em;
+  }
+
+  .main-nav-boot {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    margin-bottom: 3em;
+  }
+
   .hauptnavi {
     font-size: 16px;
-    padding-bottom: 1em;
   }
 
   .haupt-link {margin-right: 1em;}
@@ -233,7 +289,11 @@
   }
 
   #pfeil-oben {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
     width: 50px;
+    opacity: 0.5;
   }
 
   .einkaufskorb {
@@ -258,7 +318,7 @@
     align-items: end;
     position: fixed;
     right: 0;
-    top: 255px;
+    top: 55px;
     margin-right: -2em;
     z-index: 3;
   }
@@ -300,9 +360,7 @@ footer ul {
  /* -------------------------------
 Styles für Startseite
 ---------------------------------*/ 
-#startseite {
-  padding: 0 15%;
-}
+
 
 .screen {
   display: none;
@@ -328,7 +386,7 @@ Styles für Startseite
   border-radius: 0.5em;
   margin-bottom: 3em;
   position: relative;
-  z-index: 2;  
+  z-index: 5;  
 }
 
 .text-box p {
@@ -393,9 +451,6 @@ a .text-box:hover {
 Styles für Shop: Grid Haupt-Container und Container Items
 ---------------------------------*/
 
-#shop {
-  padding: 0 15%;
-}
 
 #haupt-container {
   display: grid;
@@ -407,6 +462,7 @@ Styles für Shop: Grid Haupt-Container und Container Items
   gap: 3em;
   position: relative;
   z-index: 2;
+
 }
 
   .containerbox {
@@ -456,17 +512,7 @@ Styles für Shop: Grid Haupt-Container und Container Items
 
 /* Styles für Strauss Warenseite Grid-Container */
 
-.strauss {
-  padding: 0 15%;
-}
 
-.strauss #pfeil-oben {
-  width: 50px;
-  opacity: 0.8;
-  position: fixed;
-  top: 70%;
-  right: 1%;
-}
 
  #waren-container {
   display: grid;
@@ -521,6 +567,7 @@ Styles für Shop: Grid Haupt-Container und Container Items
   .bildtext ul {
     list-style: none;
     margin-top: 1em;
+   
   }
 
   .bildtext:hover .infotext {
@@ -537,7 +584,7 @@ Styles für Shop: Grid Haupt-Container und Container Items
     padding: 2em;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
-    height: 250px;
+    height: 300px;
     position: absolute;
     top: 0;
     visibility: hidden;
@@ -594,21 +641,15 @@ Styles für Shop: Grid Haupt-Container und Container Items
   @media screen  and (max-width: 1260px) {
 
     
-
-    .header {margin-bottom: 4em;}
+    .main-nav {
+      margin-bottom: 4em;
+      background-color: white;
+    }
+    
 
     .inside main {
       padding: 0 8%;
       margin-top: 4%;
-    }
-
-    #blumen-rechts-oben {
-      position: fixed;
-      top: 0;
-      right: 3%;
-      max-height: 35%;
-      max-width: 30%;
-      z-index: 4;
     }
 
     h2 {font-size: 30px;}
@@ -625,12 +666,12 @@ Styles für Shop: Grid Haupt-Container und Container Items
 
     .seitennavi {
       position: absolute;
-      top: 2.5em;
+      top: 2em;
       left: 0;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: flex-start;
-      margin: 0;
+      background-color: white;
     }
 
     .seitennavi a {
@@ -689,7 +730,6 @@ Styles für Shop: Grid Haupt-Container und Container Items
     }
 
     h1 {
-      font-size: 46px;
       margin-bottom: 0.3em;
     }
 
@@ -736,6 +776,7 @@ Styles für Shop: Grid Haupt-Container und Container Items
     .seitennavi {
       position: static;
       display: block;
+      
     }
 
     .seitennavi li {
@@ -802,6 +843,12 @@ Styles für Shop: Grid Haupt-Container und Container Items
     
   }
 
+  @media screen and (max-width: 528px) {
+    #blumen-logo {
+      display: none;
+    }
+  }
+
 
   /* styles für Bootstrap Seite Garten und Balkon */
 
@@ -851,9 +898,7 @@ Styles für Shop: Grid Haupt-Container und Container Items
 
 
  /* styles für Bootstrap Seite Über uns */
-  .ueber {
-    padding: 0 15%;
-  }
+  
 
   .ueber a {
     text-decoration: none;
@@ -887,12 +932,10 @@ Styles für Shop: Grid Haupt-Container und Container Items
    Eventfloristik
    -----------------------*/
    
-   .kontaktseite {
-    margin: 0 10%;
-  }
 
   .kontaktseite h2 {
     font-weight: 300;
+    color: var(--secfarbe);
   }
 
   .kontaktseite p {
@@ -934,7 +977,13 @@ Styles für Shop: Grid Haupt-Container und Container Items
   #carouselExample {
     max-width: 550px;
     margin: auto; 
+  } 
+
+  .abstand {
+    height: 30px;
   }
+
+
 
 
 

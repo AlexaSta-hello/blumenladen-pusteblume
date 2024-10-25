@@ -13,34 +13,39 @@
     </script>
 </head>
 
-<body id="startseite">
+<body>
 
-    <img id="blumen-rechts-oben" src="bilder/background-720.png" alt="weiße Blumen">
-    <img id="blumen-links-unten" src="bilder/background-1440.png" alt="weiße Blumen">
-    <img id="blumen-rechts-unten" src="bilder/background-720.png" alt="weiße Blumen">
+    <div class="main-wrapper">
+
+        <img id="blumen-links-unten" src="bilder/background-1440.png" alt="weiße Blumen">
+    <img id="blumen-rechts-unten" src="bilder/background-1440.png" alt="weiße Blumen">
+
+   
 
     <header class="header">
-        
-            <div class="logo">
-                <h1><a href="index.html">PUSTEBLUME</a></h1>
-            </div>
-            <nav>
-                <button class="menubutton" onclick="this.classList.toggle('showmenu')"></button>
-                <ul class="hauptnavi">
-                    <li class="current"><a class="haupt-link" href="startseite.html">Startseite</a></li>
-                    <li><a class="haupt-link" href="shop.html">Online-Shop</a></li>
-                    <li><a class="haupt-link" href="eventfloristik.html">Eventfloristik</a></li>
-                    <li><a class="haupt-link" href="ueber-uns.html">Über uns</a></li>
-                    <li><a class="haupt-link" href="info-und-kontakt.html">Info & Kontakt</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            
+            <h1><a href="index.html">PUSTEBLUME</a><img id="blumen-logo" src="bilder/background-720.png" alt="weiße Blumen"></h1>
+        </div>   
+    </header>
+
+    <nav class="main-nav">
+        <button class="menubutton" onclick="this.classList.toggle('showmenu')"></button>
+        <ul class="hauptnavi">
+            <li class="current"><a class="haupt-link" href="startseite.html">Startseite</a></li>
+            <li><a class="haupt-link" href="shop.html">Online-Shop</a></li>
+            <li><a class="haupt-link" href="eventfloristik.html">Eventfloristik</a></li>
+            <li><a class="haupt-link" href="ueber-uns.html">Über uns</a></li>
+            <li><a class="haupt-link" href="info-und-kontakt.html">Info & Kontakt</a></li>
+        </ul>
+    </nav>
             
        
-    </header>
+   
 
     
 
-    <main>
+    <main id="startseite">
         <div id="startseite-main">
             
             <div class="flex-content">
@@ -107,6 +112,10 @@
             </ul>
         </nav>
     </footer>
+    
+    
+    </div>
+
     
 
 </body>
